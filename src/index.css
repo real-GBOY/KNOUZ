@@ -1,0 +1,120 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 33% 91%;  /* Based on secondary-color: #e8e1d9 */
+    --foreground: 0 0% 29%;    /* Based on text-color: #4a4a4a */
+
+    --card: 36 33% 91%;        /* Based on secondary-color: #e8e1d9 */
+    --card-foreground: 0 0% 29%; /* Based on text-color: #4a4a4a */
+
+    --popover: 36 33% 91%;     /* Based on secondary-color: #e8e1d9 */
+    --popover-foreground: 0 0% 29%; /* Based on text-color: #4a4a4a */
+
+    --primary: 21 25% 53%;     /* Based on primary-color: #a57c6b */
+    --primary-foreground: 36 33% 97%; /* Lighter version for contrast */
+
+    --secondary: 36 33% 91%;   /* Based on secondary-color: #e8e1d9 */
+    --secondary-foreground: 21 25% 53%; /* Based on primary-color: #a57c6b */
+
+    --muted: 29 23% 88%;       /* Based on accent-color: #d4c8be */
+    --muted-foreground: 0 0% 45%; /* Slightly lighter than text-color */
+
+    --accent: 29 23% 80%;      /* Based on accent-color: #d4c8be */
+    --accent-foreground: 21 25% 43%; /* Darker version of primary-color */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 29 23% 88%;      /* Based on accent-color: #d4c8be */
+    --input: 29 23% 88%;       /* Based on accent-color: #d4c8be */
+    --ring: 21 25% 53%;        /* Based on primary-color: #a57c6b */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 15% 10%;   /* Dark background */
+    --foreground: 36 33% 91%;   /* Light text on dark background */
+
+    --card: 20 15% 13%;         /* Dark card */
+    --card-foreground: 36 33% 91%; /* Light text on dark card */
+
+    --popover: 20 15% 13%;      /* Dark popover */
+    --popover-foreground: 36 33% 91%; /* Light text on dark popover */
+
+    --primary: 21 25% 63%;      /* Lighter primary for dark mode */
+    --primary-foreground: 20 15% 10%; /* Dark text on primary */
+
+    --secondary: 20 15% 20%;    /* Dark secondary */
+    --secondary-foreground: 36 33% 91%; /* Light text on secondary */
+
+    --muted: 20 15% 25%;        /* Dark muted */
+    --muted-foreground: 36 33% 70%; /* Light muted text */
+
+    --accent: 20 15% 25%;       /* Dark accent */
+    --accent-foreground: 36 33% 91%; /* Light text on accent */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 36 33% 91%;
+
+    --border: 20 15% 30%;       /* Dark border */
+    --input: 20 15% 30%;        /* Dark input */
+    --ring: 21 25% 63%;         /* Lighter ring for visibility */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cairo', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Animation delay utilities */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+@layer components {
+  .craft-container {
+    @apply container mx-auto px-4 sm:px-6 md:px-8;
+  }
+  
+  .craft-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .craft-card {
+    @apply bg-card rounded-lg p-6 craft-shadow transition-all duration-300;
+  }
+  
+  .craft-button {
+    @apply bg-craft-primary text-white px-6 py-3 rounded-md transition-all duration-300 hover:bg-opacity-90;
+  }
+}
