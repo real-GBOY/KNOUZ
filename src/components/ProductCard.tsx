@@ -28,7 +28,8 @@ const ProductCard = ({
 	const { user, addToCart } = useApp();
 	const navigate = useNavigate();
 
-	const handleAddToCart = () => {
+	const handleAddToCart = (e: React.MouseEvent) => {
+		e.stopPropagation(); // Prevent card click when clicking the button
 		if (!user) {
 			toast.error(
 				"سجّل الدخول للشراء\nيجب تسجيل الدخول لإضافة منتجات إلى السلة"
@@ -57,9 +58,10 @@ const ProductCard = ({
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
 			className={cn(
-				"group relative bg-muted/30 rounded-lg overflow-hidden flex flex-col h-[400px]",
+				"group relative bg-muted/30 rounded-lg overflow-hidden flex flex-col h-[400px] cursor-pointer",
 				className
-			)}>
+			)}
+			onClick={() => navigate(`/products/${id}`)}>
 			<div className='relative w-full h-48 overflow-hidden'>
 				<img
 					src={image}
