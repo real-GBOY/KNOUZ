@@ -7,7 +7,7 @@ interface LoadingScreenProps {
 	duration?: number;
 }
 
-export default function LoadingScreen({ duration = 1000 }: LoadingScreenProps) {
+export default function LoadingScreen({ duration = 300 }: LoadingScreenProps) {
 	const [isVisible, setIsVisible] = useState(true);
 
 	useEffect(() => {
@@ -80,7 +80,7 @@ export default function LoadingScreen({ duration = 1000 }: LoadingScreenProps) {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.3, duration: 0.5 }}>
-							الحِرَف العربية
+							كُنُوز
 						</motion.h1>
 					</div>
 				</motion.div>

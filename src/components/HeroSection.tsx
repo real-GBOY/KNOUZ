@@ -9,8 +9,8 @@ export default function HeroSection() {
     <section className="relative min-h-[95vh] flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?auto=format&fit=crop&w=1920&q=80"
-          alt="الحرف اليدوية"
+          src="https://i.postimg.cc/9f20fMNq/main.jpg"
+          alt="كنوز"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-black opacity-50"></div>

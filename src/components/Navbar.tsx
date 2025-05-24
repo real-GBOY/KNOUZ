@@ -51,7 +51,7 @@ export default function Navbar() {
           className="flex items-center"
         >
           <NavLink to="/" className="text-2xl font-bold text-craft-primary">
-            الحِرَف العربية
+        كُنُوز 
           </NavLink>
         </motion.div>
         

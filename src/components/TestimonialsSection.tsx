@@ -67,7 +67,7 @@ export default function TestimonialsSection({
                 <div>
                   <h4 className="font-semibold">{testimonial.name}</h4>
                   <p className="text-sm text-muted-foreground">
-                    {testimonial.role}
+              
                   </p>
                 </div>
               </div>
