@@ -98,10 +98,10 @@ export default function ContactSection() {
 	];
 
 	return (
-		<section className='py-16 bg-muted/30'>
+		<section className='py-24'>
 			<div className='craft-container'>
 				<motion.div
-					className='text-center mb-12'
+					className='text-center mb-16'
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
@@ -112,22 +112,22 @@ export default function ContactSection() {
 					</p>
 				</motion.div>
 
-				<div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+				<div className='grid grid-cols-1 lg:grid-cols-3 gap-12'>
 					<div className='lg:col-span-1'>
 						<div className='space-y-6'>
 							{contactInfo.map((item, index) => (
 								<motion.div
 									key={index}
-									className='flex items-center p-4 rounded-lg bg-background craft-shadow'
+									className='flex items-center p-6 rounded-xl bg-background craft-shadow hover:shadow-lg transition-shadow duration-300'
 									initial={{ opacity: 0, x: -20 }}
 									whileInView={{ opacity: 1, x: 0 }}
 									viewport={{ once: true }}
 									transition={{ duration: 0.6, delay: index * 0.2 }}>
-									<div className='bg-craft-primary/10 p-3 rounded-full text-craft-primary mr-4'>
+									<div className='bg-craft-primary/10 p-4 rounded-full text-craft-primary mr-6'>
 										{item.icon}
 									</div>
 									<div>
-										<h3 className='font-semibold'>{item.title}</h3>
+										<h3 className='font-semibold mb-1'>{item.title}</h3>
 										<p className='text-muted-foreground'>{item.info}</p>
 									</div>
 								</motion.div>
@@ -136,56 +136,56 @@ export default function ContactSection() {
 					</div>
 
 					<motion.div
-						className='lg:col-span-2 bg-background rounded-lg p-6 craft-shadow'
+						className='lg:col-span-2 bg-background rounded-xl p-8 craft-shadow hover:shadow-lg transition-shadow duration-300'
 						initial={{ opacity: 0, x: 20 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.6 }}>
-						<h3 className='text-xl font-semibold mb-6'>أرسل لنا رسالة</h3>
-						<form onSubmit={handleSubmit} className='space-y-4'>
+						<h3 className='text-2xl font-semibold mb-8'>أرسل لنا رسالة</h3>
+						<form onSubmit={handleSubmit} className='space-y-6'>
 							<div>
-								<label htmlFor='name' className='block mb-2'>
+								<label htmlFor='name' className='block mb-2 font-medium'>
 									الاسم
 								</label>
 								<input
 									type='text'
 									id='name'
 									name='name'
-									className='w-full p-3 border border-border rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-craft-primary'
+									className='w-full p-4 border border-border rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-craft-primary transition-all duration-300'
 									value={formData.name}
 									onChange={handleChange}
 								/>
 							</div>
 							<div>
-								<label htmlFor='email' className='block mb-2'>
+								<label htmlFor='email' className='block mb-2 font-medium'>
 									البريد الإلكتروني
 								</label>
 								<input
 									type='email'
 									id='email'
 									name='email'
-									className='w-full p-3 border border-border rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-craft-primary'
+									className='w-full p-4 border border-border rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-craft-primary transition-all duration-300'
 									value={formData.email}
 									onChange={handleChange}
 								/>
 							</div>
 							<div>
-								<label htmlFor='message' className='block mb-2'>
+								<label htmlFor='message' className='block mb-2 font-medium'>
 									الرسالة
 								</label>
 								<textarea
 									id='message'
 									name='message'
 									rows={5}
-									className='w-full p-3 border border-border rounded-md bg-transparent focus:outline-none focus:ring-2 focus:ring-craft-primary'
+									className='w-full p-4 border border-border rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-craft-primary transition-all duration-300'
 									value={formData.message}
 									onChange={handleChange}></textarea>
 							</div>
 							<motion.button
 								type='submit'
-								className='bg-craft-primary text-white py-3 px-6 rounded-md font-semibold'
-								whileHover={{ scale: 1.05 }}
-								whileTap={{ scale: 0.95 }}>
+								className='bg-craft-primary text-white py-4 px-8 rounded-lg font-semibold hover:bg-craft-primary/90 transition-colors duration-300'
+								whileHover={{ scale: 1.02 }}
+								whileTap={{ scale: 0.98 }}>
 								إرسال
 							</motion.button>
 						</form>

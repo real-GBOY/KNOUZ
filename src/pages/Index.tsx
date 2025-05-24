@@ -59,20 +59,32 @@ const Index = () => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.5 }}>
-				<FeaturedSection />
+				<div className='bg-gradient-to-b from-background to-muted/30'>
+					<FeaturedSection />
+				</div>
 
-				<ProductGrid
-					products={mockProducts.slice(0, 4)}
-					title='منتجاتنا المميزة'
-				/>
+				<div className='bg-background'>
+					<ProductGrid
+						products={mockProducts.slice(0, 4)}
+						title='منتجاتنا المميزة'
+					/>
+				</div>
 
-				<CategoriesShowcase categories={mockCategories} />
+				<div className='bg-gradient-to-b from-muted/30 to-background'>
+					<CategoriesShowcase categories={mockCategories} />
+				</div>
 
-				<ArtisansShowcase />
+				<div className='bg-background'>
+					<ArtisansShowcase />
+				</div>
 
-				<TestimonialsSection testimonials={mockTestimonials} />
+				<div className='bg-gradient-to-b from-background to-muted/30'>
+					<TestimonialsSection testimonials={mockTestimonials} />
+				</div>
 
-				<ContactSection />
+				<div className='bg-background'>
+					<ContactSection />
+				</div>
 			</motion.div>
 		</Layout>
 	);

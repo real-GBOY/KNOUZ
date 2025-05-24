@@ -58,10 +58,10 @@ export default function ProductGrid({
 	};
 
 	return (
-		<section className='py-12'>
+		<section className='py-24'>
 			<div className='craft-container'>
 				<motion.h2
-					className='text-3xl font-bold text-center mb-4'
+					className='text-3xl font-bold text-center mb-6'
 					initial={{ opacity: 0, y: -20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
@@ -71,7 +71,7 @@ export default function ProductGrid({
 
 				{showFilters && (
 					<motion.div
-						className='flex flex-wrap justify-center gap-4 mb-8'
+						className='flex flex-wrap justify-center gap-4 mb-12'
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true }}
@@ -79,10 +79,10 @@ export default function ProductGrid({
 						{categories.map((category) => (
 							<motion.button
 								key={category}
-								className={`px-4 py-2 rounded-full text-sm ${
+								className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
 									activeCategory === category
-										? "bg-craft-primary text-white"
-										: "bg-muted text-foreground hover:bg-craft-accent"
+										? "bg-craft-primary text-white shadow-lg"
+										: "bg-muted text-foreground hover:bg-craft-accent hover:shadow-md"
 								}`}
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
@@ -94,7 +94,7 @@ export default function ProductGrid({
 				)}
 
 				<motion.div
-					className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'
+					className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'
 					variants={containerVariants}
 					initial='hidden'
 					whileInView='visible'
