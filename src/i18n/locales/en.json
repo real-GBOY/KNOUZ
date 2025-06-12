@@ -1,0 +1,32 @@
+{
+	"common": {
+		"welcome": "Welcome",
+		"home": "Home",
+		"about": "About",
+		"contact": "Contact",
+		"language": "Language"
+	},
+	"navigation": {
+		"menu": "Menu",
+		"settings": "Settings",
+		"profile": "Profile",
+		"logout": "Logout"
+	},
+	"buttons": {
+		"submit": "Submit",
+		"cancel": "Cancel",
+		"save": "Save",
+		"delete": "Delete",
+		"edit": "Edit"
+	},
+	"messages": {
+		"loading": "Loading...",
+		"error": "An error occurred",
+		"success": "Operation successful"
+	},
+	"error": {
+		"somethingWentWrong": "Something went wrong",
+		"pleaseTryAgain": "Please try again later",
+		"refreshPage": "Refresh Page"
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"common": {
+		"welcome": "مرحباً",
+		"home": "الرئيسية",
+		"about": "حول",
+		"contact": "اتصل بنا",
+		"language": "اللغة"
+	},
+	"navigation": {
+		"menu": "القائمة",
+		"settings": "الإعدادات",
+		"profile": "الملف الشخصي",
+		"logout": "تسجيل الخروج"
+	},
+	"buttons": {
+		"submit": "إرسال",
+		"cancel": "إلغاء",
+		"save": "حفظ",
+		"delete": "حذف",
+		"edit": "تعديل"
+	},
+	"messages": {
+		"loading": "جاري التحميل...",
+		"error": "حدث خطأ",
+		"success": "تمت العملية بنجاح"
+	},
+	"error": {
+		"somethingWentWrong": "حدث خطأ ما",
+		"pleaseTryAgain": "يرجى المحاولة مرة أخرى لاحقاً",
+		"refreshPage": "تحديث الصفحة"
+	}
+}
